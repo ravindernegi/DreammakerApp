@@ -1,0 +1,37 @@
+
+<ion-header-bar class="bar  bar-stable">
+  
+  <h1 class="title">Login/Sign Up</h1>
+  
+</ion-header-bar>
+<ion-view view-title="Login/Sign Up" hide-nav-bar="true">
+  <ion-content> 
+  <div class="list top_padding" ng-controller="LoginCtrl">
+    <form name="login_frm">
+      
+        <label class="item item-input">
+          
+          <input type="text"  id="username" placeholder="Email">
+        </label>
+		<div ng-show="emailBlank" class="ng-hide error">Please enter the Email </div>
+		<div ng-show="emailinValid" class="ng-hide error">Please enter the Valid Email </div>
+        <label class="item item-input">
+         
+          <input type="password"  id="password"  placeholder="Password">
+        </label>
+		<div ng-show="passwordBlank" class="ng-hide error">Please enter the password </div>
+        <label class="item">
+          <button class="button button-block button-positive" type="button" ng-disabled="isProcessing" id="log_in" ng-click="logIN()">Log in</button>
+        </label>
+      
+    </form>
+	<fieldset class="featured-header">
+    <legend>Or</legend>
+</fieldset>
+	 <label class="item">
+          <button class="button button-block button-positive" type="button" ui-sref="app.register">Sign Up</button>
+        </label>
+		
+	</div>	
+  </ion-content>
+</ion-view>

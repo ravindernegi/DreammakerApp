@@ -1,0 +1,36 @@
+<ion-view view-title="Messages">
+
+  <ion-content class="datalist chat ">
+  <div class="list list-inset" style="padding-top:8px;">
+  <label class="item item-input">
+    
+    <input type="text" placeholder="Search" ng-model="searchText">
+	 <i class="icon ion-search placeholder-icon"></i>
+  </label>
+</div>
+    <ion-list>
+      <ion-item class="item-avatar" ng-repeat="chatlist in chatlists | filter:searchText" href="#/app/messages/{{chatlist.id}}/{{(currentUser.id==chatlist.get('involvedUserId').id) && chatlist.get('userID').id || chatlist.get('involvedUserId').id}}">
+      
+	
+		<img ng-if="currentUser.id!=chatlist.get('involvedUserId').id"  src="{{ (chatlist.get('involvedUserId').get('profilePic')._url) && chatlist.get('involvedUserId').get('profilePic')._url || 'img/ravi.jpg' }}" class="profile_avatar">
+      
+		<p ng-if="currentUser.id!=chatlist.get('involvedUserId').id" class=" italic_list">{{chatlist.get('involvedUserId').get('firstName')}} {{chatlist.get('involvedUserId').get('lastName')}}</p>
+		
+		
+      
+	 
+	  
+	 
+		<img ng-if="currentUser.id==chatlist.get('involvedUserId').id"  src="{{ (chatlist.get('userID').get('profilePic')._url) && chatlist.get('userID').get('profilePic')._url || 'img/ravi.jpg' }}" class="profile_avatar">
+      
+		<p ng-if="currentUser.id==chatlist.get('involvedUserId').id" class=" italic_list">{{chatlist.get('userID').get('firstName')}} {{chatlist.get('userID').get('lastName')}}</p>
+		
+		<p class="chat_font_color">{{chatlist.get('dreamID').get('dreamDesc')}}</p>
+      
+	
+	  
+	  </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
+

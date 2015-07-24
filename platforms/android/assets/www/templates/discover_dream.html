@@ -1,0 +1,33 @@
+<ion-header-bar class="bar  bar-stable">
+  
+        <button class="button button-icon button-clear ion-chevron-left" ui-sref="app.discover_dreams">
+        </button>
+    
+  <h1 class="title">Dreams</h1>
+ 
+</ion-header-bar>
+<ion-view view-title="Dream" hide-nav-bar="true">
+  <ion-content>
+  
+  <div class="list deatil_dream top_padding ">
+			  <div class="row">
+				  <div class="col col-25"><img src="{{ (dream.get('userID').get('profilePic')._url) && dream.get('userID').get('profilePic')._url || 'img/ravi.jpg' }}" class="profile_avatar img_round"></div>
+				  <div class="col col-75 user_name"><h2 class="heading_list">{{ dream.get('userID').get('firstName')}} {{dream.get('userID').get('lastName')}}</h2></div>
+			</div>
+	
+		<div class="dream_detail_box">
+			<p class=" italic_list dream_btn_edit {{(currentUser.id == dream.get('userID').id) && 'blockTag' || 'hideTag'}}" ng-click="editDream('{{dream.id}}')"> My dream is... </p>
+			<h2 class="heading_list"> {{dream.get('dreamDesc')}}</h2>
+		
+			
+		</div>	
+		<div align="center" class="share_button"> <a class="button button-icon  share_icon" ></a> </div>
+			 <input type="hidden" value="{{dream.get('userID').id}}"  id="dreamMakerID"/>
+			    <button class="button button-block button-positive hideTag {{get_involve}}" type="button" ng-controller="MyDreamDetailCtrl" ng-click="getInvolve()" >Get Involved!</button>
+			    <button class="button button-block button-positive hideTag {{complete_dream}}" type="button" ng-controller="MyDreamDetailCtrl" ng-click="completeDream()">Complete Dream</button>
+				<p class="font_color completed hideTag {{completed}}"> (complete)</p>
+				
+</div>	
+
+  </ion-content>
+</ion-view>

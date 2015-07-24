@@ -1,0 +1,25 @@
+<ion-view view-title="{{dreamName}}">
+ <ion-content class="datalist chatlist">
+    <ion-list>
+      <ion-item class="item-avatar" ng-repeat="chatlist in chatlists" >
+		<div class="row" >
+			<img  ng-if="(touserId == chatlist.get('fromID').id )" src="{{ (chatlist.get('fromID').get('profilePic')._url) && chatlist.get('fromID').get('profilePic')._url || 'img/ravi.jpg' }}" class="profile_avatar img_round">
+			
+			  <div class="col  message  {{ (touserId == chatlist.get('fromID').id ) &&  ' col-75  text_align_lt ' || 'text_align_rt'  }}"><span class="yes {{ (touserId == chatlist.get('fromID').id ) && 'you' || 'me' }}">{{chatlist.get('message')}}</span></div>
+		</div>
+		
+		
+		</ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
+<div class="bar bar-footer ">
+  <div class="item item-input-inset chat_panel">
+    <label class="item-input-wrapper">
+      <input type="text" placeholder="Type a Message..." ng-model="chat.message" ng-keydown="$event.keyCode == 13 ? pushMessage() : null">
+    </label> 
+    <button class="button button-small" ng-click="sendMessage()">
+      Send
+    </button>
+  </div>
+</div>

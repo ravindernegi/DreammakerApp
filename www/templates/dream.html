@@ -1,0 +1,22 @@
+<ion-view view-title="Update Dream">
+  <ion-content>
+  <div class="list top_padding">
+     <form ng-controller="DreamCtrl">
+      
+        <label class="item item-input">
+          <textarea name="comment" id="comment-textarea" 
+			ng-model="dream.dreamDesc" rows="10">
+			
+			
+	</textarea>
+         
+        </label>
+    
+        <label class="item">
+          <button class="button button-block button-positive" type="submit"  ng-click="updateDream({{dream.id}})">Update</button>
+        </label>
+      
+    </form>
+	</div>	
+  </ion-content>
+</ion-view>

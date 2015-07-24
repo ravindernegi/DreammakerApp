@@ -1,0 +1,50 @@
+<ion-header-bar class="bar  bar-stable">
+  
+  <h1 class="title">Create Account</h1>
+  <div class="buttons">
+    <button class="button icon login_btn caps" ui-sref="app.login">Login</button>
+  </div>
+</ion-header-bar>
+<ion-view view-title="Create Account" hide-nav-bar="true">
+  <ion-content>
+  <div class="list top_padding" ng-controller="UsersCtrl">
+    <form  name="signupFrm">
+      
+        <label class="item item-input">
+          
+          <input type="text" name="firstName" id="firstName" placeholder="First Name">
+        </label>
+		<div ng-show="firstNameBlank" class="ng-hide error">Please enter the first name</div>
+        <label class="item item-input">
+         
+          <input type="text" name="lastName" id="lastName" placeholder="Last Name">
+        </label>
+		<div ng-show="lastNameBlank" class="ng-hide error">Please enter the last name</div>
+		 <label class="item item-input">
+         
+          <input type="text" name="emailId" id="emailId" placeholder="Email">
+        </label>
+		<div ng-show="emailBlank" class="ng-hide error">Please enter the Email </div>
+		<div ng-show="emailinValid" class="ng-hide error">Please enter the Valid Email </div>
+		<div ng-show="emailAlready" class="ng-hide error">Email Address already exits </div>
+		<label class="item item-input">
+         
+          <input type="password" name="pwd" id="pwd" placeholder="Password">
+        </label>
+		<div ng-show="passwordBlank" class="ng-hide error">Please enter the password</div>
+		<label class="item item-input">
+         
+          <input type="password" name="rePwd" id="rePwd" placeholder="Retype Password">
+        </label>
+		<div ng-show="rePasswordBlank" class="ng-hide error">Please enter the Retype Password</div>
+		<div ng-show="rePasswordinValid" class="ng-hide error">Password does not match</div>
+        <label class="item">
+          <button class="button button-block button-positive" type="button" ng-click="create()">Submit</button>
+        </label>
+      
+    </form>
+
+		
+	</div>
+  </ion-content>
+</ion-view>

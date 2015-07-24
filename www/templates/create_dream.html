@@ -1,0 +1,21 @@
+<ion-view view-title="Create Dream">
+  <ion-content>
+  <div class="list top_padding">
+     <form ng-controller="DreamCtrl">
+      <div ng-show="MessageBlank" class="ng-hide error">Please enter a Dream</div>
+        <label class="item item-input">
+		
+          <textarea name="comment" id="comment-textarea" 
+			ng-model="dream.comment" rows="10">
+	</textarea>
+         
+        </label>
+     
+        <label class="item">
+          <button class="button button-block button-positive" type="submit"  ng-click="createDream()">Submit</button>
+        </label>
+      
+    </form>
+	</div>	
+  </ion-content>
+</ion-view>

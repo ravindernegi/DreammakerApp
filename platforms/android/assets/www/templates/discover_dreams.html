@@ -1,0 +1,28 @@
+<ion-header-bar class="bar  bar-stable">
+  
+        <button class="button button-icon button-clear ion-navicon" ng-controller="AccountCtrl" ng-click="toggleLeftSideMenu();">
+        </button>
+    
+  <h1 class="title">Discover Dreams</h1>
+  <div class="buttons">
+    <a class="button button-icon icon ion-plus" ui-sref="app.create_dream"></a>
+  </div>
+</ion-header-bar>
+<ion-view view-title="Discover Dreams" hide-nav-bar="true">
+  <ion-content class="datalist dicover_dream">
+  
+   
+    <ion-list>
+      <ion-item class="item-avatar" ng-repeat="dreamlist in dreamdata" href="#/app/discover/{{dreamlist.id}}">
+      <img src="{{ (dreamlist.get('userID').get('profilePic')._url) && dreamlist.get('userID').get('profilePic')._url || 'img/ravi.jpg' }}" class="profile_avatar">
+     	<p class=" italic_list" > {{(currentUser.id == dreamlist.get('userID').id) && 'My dream is...' || ''}} </p>
+		<h2 class="heading_list">{{dreamlist.get('dreamDesc')}}</h2>
+		<p class="font_color"> {{ (dreamlist.get('dreamStatus')) &&  '(complete)' }}</p>
+		
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
+<div class="bar bar-footer ">
+  <a href="#"><h1 class="title ion-plus" ui-sref="app.create_dream"> Create Dreams</h1></a>
+</div>

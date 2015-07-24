@@ -1,0 +1,137 @@
+/* Empty. Add your own CSS if you like */
+body, .ionic-body{color:#333;}
+.menu-left{background:#9E968F;}
+.bar{height:50px;}
+.menu-left .list ion-item.item, .menu-left .list ion-item.item a.item-content{background:none repeat scroll 0 0 rgba(0, 0, 0, 0); color:#fff; font-weight:bold; text-transform: uppercase;}
+.bar.bar-header, .bar-footer{background:#72c8d4;}
+.bar.bar-stable{border:#72c8d4; border-bottom: 5px solid #4b0909;}
+.bar.bar-stable .title, .bar.bar-footer .title{ color:#fff; font-size:22px;}
+.button.button-positive{background:#72c8d4;border-color:#72c8d4;}
+.button.button-positive.activated{background:#66beca;border-color:#66beca;}
+.bar-stable .button.button-clear{color:#4b0909; }
+.list{width: 94%;margin:0 auto;}
+.item, .item-input{border:none; padding:6px 0;}
+.item-input input{padding:0 1%;}
+.top_padding{padding-top:30px;}
+.item-input input[type='text'], .item-input input[type='password'], textarea{border:1px solid #72c8d4;border-radius: 5px;}
+.bar-stable .button.login_btn{border:1px solid #fff; background:#72c8d4; border-radius: 5px;color:#fff; line-height: normal;min-height: auto;}
+.featured-header {    border-bottom: none;    border-left: none;    border-right: none;    text-align: center;    border-color: #999;}
+.featured-header legend {    -webkit-padding-start: 8px;    -webkit-padding-end: 8px;    background: transparent;    font-weight: normal;    color: #000;	width:auto;	border:none;}
+.caps{text-transform:uppercase;}
+#logut_btn {
+  background: none repeat scroll 0 0 #ffffff;
+  border: 1px solid #72c8d4;
+  color: #72c8d4;
+  font-size: 12px;
+  height: 30px;
+  line-height: 30px;
+  margin: 0;
+  min-height: 30px;
+  padding: 0;
+  position: absolute;
+  right:0;
+  width:70px;
+}
+.img_round{border-radius:100%;}
+.profile_img {
+  height: 70px;
+  width: 70px;
+}
+#profile_pic,#profile_edit{text-align:center;}
+#profile_edit, #dream_btn_edit{ width:145px; margin:20px auto; background: url("../img/edit_icon.png") no-repeat scroll right center / 30px auto rgba(0, 0, 0, 0);}
+.account .item-input input[type='text'], .account  .item-input input[type='password']{background: url("../img/edit_icon.png") no-repeat scroll right center / 30px auto rgba(0, 0, 0, 0);}
+.bar .button.button-clear .icon::before, .bar .button.button-clear.icon::before, .bar .button.button-clear.icon-left::before, .bar .button.button-clear.icon-right::before {
+ 
+  font-weight: bold;
+  line-height: 32px;
+}
+.menu-left .list ion-item.item{padding-left: 25px;border-bottom:2px solid #fff;text-align: center; background: url("../img/menu_icons.png") no-repeat scroll 0 0 / 35px auto rgba(0, 0, 0, 0);}
+.menu-left .list ion-item.item:nth-child(1) {background-position:10px 19px;}
+.menu-left .list ion-item.item:nth-child(2) {background-position:10px -93px;}
+.menu-left .list ion-item.item:nth-child(3) {background-position:10px -202px;}
+.menu-left .list ion-item.item:nth-child(4) {background-position:10px -310px;}
+.item.active, .item.activated, .item-complex.active .item-content, .item-complex.activated .item-content, .item .item-content.active, .item .item-content.activated {
+  border-color: #D2E4F8;
+  background-color: #e3f4f6; 
+}
+.datalist .list ion-item.item {
+  -moz-border-bottom-colors: none;
+  -moz-border-left-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-top-colors: none;
+  border-color: #e3f4f6;
+  border-image: none;
+  border-style: solid;
+  border-width: 1px 0;
+  padding: 0;
+  text-align:center;
+  
+}
+.item p.font_color{color:#66cccc;}
+.item p.italic_list, .dream_detail_box p.italic_list{font-style:italic; color:#66cccc;}
+.item h2.heading_list, .dream_detail_box h2.heading_list{color:#669999;font-size:22px;}
+.datalist .list ion-item.item.item-avatar .item-content{padding-left:90px;}
+.datalist .list ion-item.item.item-avatar .item-content .profile_avatar, 
+.chatlist.datalist .list ion-item.item .profile_avatar
+{width:70px;height: 70px;}
+
+.datalist.chat .list ion-item.item {text-align:left;}
+
+.chat_panel{width:100%;margin:0;background: none repeat scroll 0 0 rgba(0, 0, 0, 0);}
+.chat_panel .item-input-wrapper{ margin:0;background: #fff;}
+.chat_panel .button-small{margin-left:0;background: none repeat scroll 0 0 rgba(0, 0, 0, 0);border: medium none;font-weight: bold;}
+.chatlist.datalist .list ion-item.item {border:none;}
+.chatlist.datalist .list ion-item.item .profile_avatar{ margin-top:6px;}
+.pro_col_10{max-width:80px;}
+.text_align_lt{text-align:left;}
+.text_align_cn{text-align:center;}
+.text_align_rt{text-align:right;padding-right: 0;}
+.datalist.chatlist  .list .row .col.col-75{margin-top:20px;}
+.item{font-size:14px;}
+.datalist.chatlist .list .row .col.col-75 span {
+  background: none repeat scroll 0 0 #e2f4f6;
+  border-radius: 5px;
+  padding: 15px;
+}
+.datalist.chatlist .list .row .col span.me {
+  background: none repeat scroll 0 0 #72c8d4;
+  border-radius: 5px;
+  padding: 15px;
+  float: right;
+}
+
+.deatil_dream.list .row{border-bottom: 1px solid #e3f4f6;}
+.deatil_dream.list .row .profile_avatar{width:70px;height: 70px;}
+.deatil_dream.list .row .user_name{padding-top:15px; text-align:center;}
+.deatil_dream.list .row .user_name h2{color:#72c8d4; font-size:22px;}
+.dream_detail_box{padding:50px 0; text-align:center;}
+.dream_detail_box h2.heading_list{font-size:28px;margin:0px 0;}
+.dream_detail_box p.italic_list{margin:0px 0;}
+.bar .button.button-icon.ion-custom-flag {
+  background: url("../img/flag.png") no-repeat scroll center center / 37px auto rgba(0, 0, 0, 0);
+  width: 35px;
+}
+.button.button-icon.share_icon {
+  background: url("../img/involve_icon.png") no-repeat scroll center center / 50px auto rgba(0, 0, 0, 0);
+  height: 55px;
+  width: 55px;
+}
+.share_button{padding:15px 0;}
+.dream_detail_box .italic_list.dream_btn_edit{width:145px;margin:0 auto;background: url("../img/edit_icon.png") no-repeat scroll right center / 30px auto rgba(0, 0, 0, 0);}
+.yes{display:block;}
+.no{display:none;}
+.error{color:#ff0000;}
+.hideTag{display:none;}
+.blockTag{display:block;}
+.my_dream .list{padding-bottom:70px;}
+.dicover_dream .list{padding-bottom:70px;}
+.completed{text-align:center; font-size:18px;color: #72c8d4;}
+
+@media screen and (min-width: 500px) {
+.profile_img {
+  height: 150px;
+  width: 150px;
+}
+
+
+}
